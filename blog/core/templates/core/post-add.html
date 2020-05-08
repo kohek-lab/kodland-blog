@@ -1,0 +1,35 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <form method="post" action="{% url 'core:new-post'%}" enctype="multipart/form-data">
+
+    {% csrf_token %}
+
+    <table>
+        <tr>
+            <td>{{ post_form.post_title.label_tag }}</td>
+            <td>{{ post_form.post_title}}</td>
+        </tr>
+        <tr>
+            <td>{{ post_form.post_body.label_tag }}</td>
+            <td>{{ post_form.post_body }}</td>
+        </tr>
+        <tr>
+            <td>{{ post_form.post_image.label_tag }}</td>
+            <td>{{ post_form.post_image }}</td>
+        </tr>
+    </table>
+
+        <div class="pt-4">
+    <input type="submit" value="Опубликовать" class="btn btn-danger">
+            </div>
+
+    </form>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,17 @@
+@font-face {
+  font-family: CircleRounded;
+  src: url('/static/fonts/CirceRounded-Bold.otf') format("truetype");
+}
+
+#uchenik {
+    border: 3px solid #010101;
+    box-sizing: border-box;
+}
+
+.navbar-text {
+    font-family: CircleRounded;
+    font-size: 24px;
+    line-height: 31px;
+
+    color: #010101 !important;
+}
